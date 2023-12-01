@@ -5,34 +5,34 @@ describe("links/reducer()", () => {
   it("should add new links", () => {
     expect(reducer([], addLink())).toEqual([{ url: "https://" }]);
     expect(
-      reducer([{ url: "https://alejandro.amerisse.com/" }], { type: "ADD_LINK" }),
-    ).toEqual([{ url: "https://alejandro.amerisse.com/" }, { url: "https://" }]);
+      reducer([{ url: "https://alejandroamerisse.com/" }], { type: "ADD_LINK" }),
+    ).toEqual([{ url: "https://alejandroamerisse.com/" }, { url: "https://" }]);
   });
 
   it("should remove links", () => {
     expect(
       reducer(
         [
-          { url: "https://alejandro.amerisse.com/" },
-          { url: "https://alejandro.amerisse.com/about.html" },
+          { url: "https://alejandroamerisse.com/" },
+          { url: "https://alejandroamerisse.com/about.html" },
         ],
         removeLink(0),
       ),
-    ).toEqual([{ url: "https://alejandro.amerisse.com/about.html" }]);
+    ).toEqual([{ url: "https://alejandroamerisse.com/about.html" }]);
   });
 
   it("should update links", () => {
     expect(
       reducer(
         [
-          { url: "https://alejandro.amerisse.com/" },
-          { url: "https://alejandro.amerisse.com/about.html" },
+          { url: "https://alejandroamerisse.com/" },
+          { url: "https://alejandroamerisse.com/about.html" },
         ],
-        updateLink(0, { name: "Tabliss", url: "https://alejandro.amerisse.com/" }),
+        updateLink(0, { name: "Tabliss", url: "https://alejandroamerisse.com/" }),
       ),
     ).toEqual([
-      { name: "Tabliss", url: "https://alejandro.amerisse.com/" },
-      { url: "https://alejandro.amerisse.com/about.html" },
+      { name: "Tabliss", url: "https://alejandroamerisse.com/" },
+      { url: "https://alejandroamerisse.com/about.html" },
     ]);
   });
 
@@ -40,31 +40,31 @@ describe("links/reducer()", () => {
     expect(
       reducer(
         [
-          { url: "https://alejandro.amerisse.com/" },
-          { url: "https://alejandro.amerisse.com/about.html" },
-          { url: "https://alejandro.amerisse.com/support.html" },
+          { url: "https://alejandroamerisse.com/" },
+          { url: "https://alejandroamerisse.com/about.html" },
+          { url: "https://alejandroamerisse.com/support.html" },
         ],
         reorderLink(1, 0),
       ),
     ).toEqual([
-      { url: "https://alejandro.amerisse.com/about.html" },
-      { url: "https://alejandro.amerisse.com/" },
-      { url: "https://alejandro.amerisse.com/support.html" },
+      { url: "https://alejandroamerisse.com/about.html" },
+      { url: "https://alejandroamerisse.com/" },
+      { url: "https://alejandroamerisse.com/support.html" },
     ]);
 
     expect(
       reducer(
         [
-          { url: "https://alejandro.amerisse.com/" },
-          { url: "https://alejandro.amerisse.com/about.html" },
-          { url: "https://alejandro.amerisse.com/support.html" },
+          { url: "https://alejandroamerisse.com/" },
+          { url: "https://alejandroamerisse.com/about.html" },
+          { url: "https://alejandroamerisse.com/support.html" },
         ],
         reorderLink(1, 2),
       ),
     ).toEqual([
-      { url: "https://alejandro.amerisse.com/" },
-      { url: "https://alejandro.amerisse.com/support.html" },
-      { url: "https://alejandro.amerisse.com/about.html" },
+      { url: "https://alejandroamerisse.com/" },
+      { url: "https://alejandroamerisse.com/support.html" },
+      { url: "https://alejandroamerisse.com/about.html" },
     ]);
   });
 

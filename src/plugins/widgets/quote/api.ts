@@ -4,7 +4,7 @@ import { Quote } from "./types";
 // Get developer excuse
 async function getDeveloperExcuse() {
   try {
-    const res = await fetch("https://api.alejandro.amerisse.com/v1/developer-excuses");
+    const res = await fetch("https://api.alejandroamerisse.com/v1/developer-excuses");
     const body = await res.json();
 
     return {

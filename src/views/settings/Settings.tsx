@@ -106,7 +106,7 @@ const Settings: React.FC = () => {
             </a>
           </p>
           <p>
-            <a href="https://alejandro.amerisse.com/" target="_blank">
+            <a href="https://alejandroamerisse.com/" target="_blank">
               <Icon name="globe" /> Website
             </a>
             &nbsp;&nbsp;
