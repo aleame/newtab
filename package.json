@@ -12,6 +12,7 @@
     "dev:chromium": "BUILD_TARGET=chromium webpack --watch",
     "dev:firefox": "BUILD_TARGET=firefox webpack --watch",
     "dev:web": "BUILD_TARGET=web webpack serve",
+    "start":"npm run dev:web",
     "test": "tsc -p tsconfig.test.json && jest",
     "translations": "node ./scripts/translations.js"
   },
